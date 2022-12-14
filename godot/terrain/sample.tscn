@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7l44pfvren4i"]
+
+[ext_resource type="MeshLibrary" uid="uid://c7dja0crgm5s0" path="res://terrain/terrain-tiles.tres" id="1_6qj4i"]
+[ext_resource type="ArrayMesh" uid="uid://bscpb5qhvivdj" path="res://blender/tank_mesh.tres" id="2_whvb4"]
+[ext_resource type="ArrayMesh" uid="uid://lmp3j5fkn0cd" path="res://blender/city_mesh.tres" id="3_w6yro"]
+[ext_resource type="ArrayMesh" uid="uid://bdx3tr0ddcp8p" path="res://blender/industry_mesh.tres" id="4_3sxju"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("1_6qj4i")
+cell_size = Vector3(1, 1, 1)
+data = {
+"cells": PackedInt32Array(0, 1, 0, 0, 0, 1, 0, 2, 0, 1, 2, 0, 1, 0, 1, 1, 1, 0, 1, 65535, 0, 0, 65535, 0, 2, 0, 1441794, 3, 0, 1441794, 65533, 65533, 1441793, 65533, 65532, 1441793, 0, 65529, 655361, 1, 65529, 655361, 4, 65532, 1048577, 4, 65533, 1048577, 65531, 65534, 1441795, 65535, 65527, 655363)
+}
+
+[node name="TankMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.627779, 0.494545, 2.57294)
+mesh = ExtResource("2_whvb4")
+
+[node name="CityMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.68914, 0.537368, 1.67779)
+mesh = ExtResource("3_w6yro")
+
+[node name="IndustryMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.69194, 0.501262, -0.399042)
+mesh = ExtResource("4_3sxju")
