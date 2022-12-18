@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5p20f0qqittc"]
+
+[ext_resource type="PackedScene" uid="uid://cdm7ikaa5f1uw" path="res://terrain/terrain-tiles.glb" id="1_gdskq"]
+
+[node name="terrain-tiles" type="Node3D"]
+
+[node name="terrain-tiles" parent="." instance=ExtResource("1_gdskq")]
